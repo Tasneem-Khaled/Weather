@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- favicon -->
+    <link href="" rel="icon" type="image/png">
+    <!-- css bootstrap -->
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <!-- font awesome -->
+    <link rel="stylesheet" href="./css/all.min.css">
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <!-- main css -->
+    <link rel="stylesheet" href="./css/style.css">
+
+    <title>Weather</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary p-4 pe-0">
+        <div class="container-fluid container-custom">
+            <div class="navbar-logo d-flex justify-content-center align-items-center gap-3">
+                <img src="./weather-images/weather1.png" alt="weather logo" width="64">
+                <div class="logo-text d-flex flex-column">
+                    <a class="navbar-brand p-0 fw-bold" href="#">Weather</a>
+                    <span>Tagline goes here</span>
+                </div>
+            </div>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"><i class="navbar-toggler-icon fa-solid fa-bars pt-1"></i></span>
+            </button>
+            <div class="collapse navbar-collapse nav justify-content-end gap-3" id="navbarNavAltMarkup">
+                <a class="nav-link active choice" aria-current="page" href="#">Home</a>
+                <a class="nav-link" href="#">News</a>
+                <a class="nav-link" href="#">Live Cameras</a>
+                <a class="nav-link" href="#">Photos</a>
+                <a class="nav-link" href="#">Contact us</a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="d-flex flex-column justify-content-center align-items-center">
+        <div class="main">
+            <div class="container-custom container-fluid my-5 px-4">
+                <form class="d-flex" role="search">
+                    <input class="form-control search-input me-2 rounded-5 px-4 py-3 mt-4" type="search"
+                        placeholder="Find Your Location..." aria-label="Search" />
+                    <button
+                        class="btn btn-custom rounded-circle fw-bold d-flex align-items-center justify-content-center fs-3 mt-4"
+                        type="submit"><i class="fa-solid fa-magnifying-glass-location"></i></button>
+                </form>
+            </div>
+        </div>
+        <div class="cards-table">
+            <div class="container-custom container-fluid px-4">
+                <div class="row">
+                    <div class="col-lg-4">
+                        <div class="card" id="today">
+                            <div class="card-header d-flex justify-content-between align-items-center">
+                                <span></span>
+                                <span></span>
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-city"></h5>
+                                <span class="number d-lg-block"></span>
+                                <img id="dayOrNight" src="" width="90">
+                                <span id="weather-desc" class="d-block pb-4 fs-6"></span>
+                                <div class="weather-info d-flex justify-content-evenly">
+                                    <div>
+                                        <img src="./weather-images/weather4.png" width="23">
+                                        <span class="humidity"></span>
+                                    </div>
+
+                                    <div>
+                                        <img src="./weather-images/weather5.png" width="23">
+                                        <span class="wind-speed"></span>
+                                    </div>
+
+                                    <div>
+                                        <img src="./weather-images/weather6.png" width="23">
+                                        <span class="wind-dir">
+                                    </div>
+
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="card special-card" id="day2">
+                            <div class="card-header special-card-header"></div>
+                            <div class="card-body text-center d-flex justify-content-start align-items-center pt-5 gap-3 flex-column">
+                                <img class="weather-icon" width="60">
+                                <div class="temp-high fs-4 fw-medium text-white"></div>
+                                <div class="temp-low fs-6"></div>
+                                <div class="weather-desc"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="card" id="day3">
+                            <div class="card-header"></div>
+                            <div class="card-body text-center d-flex justify-content-start align-items-center pt-5 gap-3 flex-column">
+                                <img class="weather-icon" width="60">
+                                <div class="temp-high fs-4 fw-medium text-white"></div>
+                                <div class="temp-low fs-6"></div>
+                                <div class="weather-desc"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </section>
+    <footer>
+        <div class="copy-right ">
+            <div class="container-custom container-fluid px-4">
+                <div class="row">
+                    <div class="col-md-8 position-relative me-lg-2">
+                        <form class="d-flex my-4 position-relative" role="search">
+                            <input class="form-control sub-input me-lg-2 me-0 rounded-5 px-4 py-3" type="email"
+                                placeholder="Enter your email to subscribe..." />
+                            <button
+                                class="btn btn-custom rounded-5 fw-medium d-flex align-items-center justify-content-center sub-btn"
+                                type="submit">Subscribe</button>
+                        </form>
+                    </div>
+                    <div class="col-md-3 my-4 ms-5">
+                        <ul class="list-unstyled d-flex">
+                            <li class="Social-icons"><a class="text-decoration-none" href="#"><i
+                                        class="fa-brands fa-facebook-f"></i></a></li>
+                            <li class="Social-icons"><a class="text-decoration-none" href="#"><i
+                                        class="fa-brands fa-twitter"></i></a></li>
+                            <li class="Social-icons"><a class="text-decoration-none" href="#"><i
+                                        class="fa-brands fa-google"></i></a></li>
+                            <li class="Social-icons"><a class="text-decoration-none" href="#"><i
+                                        class="fa-brands fa-pinterest"></i></a></li>
+                        </ul>
+                    </div>
+                    <p style="color: rgb(191, 193, 200); font-size: .875rem; text-align: center;">Copy Right 2014
+                        Company name. Designed by © By Themezy All Rights Reserved</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="./js/main.js"></script>
+</body>
+
+</html>
