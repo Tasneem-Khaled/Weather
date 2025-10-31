@@ -1,6 +1,8 @@
 body {
     background-color: #1E202B;
     font-family: "Montserrat", sans-serif;
+    overflow-x: hidden;
+}
 }
 
 @media (min-width: 768px) {
